@@ -1,0 +1,11 @@
+.notification {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1; /* Светло-серый фон */
+  border: 1px solid #ccc; /* Светло-серая граница */
+  border-radius: 5px;
+  margin-top: 20px; /* Верхний отступ (по желанию) */
+  font-size: 18px;
+  color: #333;
+  height: 100px;
+}

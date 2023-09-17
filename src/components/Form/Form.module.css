@@ -1,0 +1,36 @@
+h2 {
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+.formContainer {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button:active {
+  background-color: #1f6db7;
+}
