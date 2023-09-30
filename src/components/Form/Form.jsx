@@ -16,6 +16,7 @@ const Form = () => {
   });
 
   function clickedBtn(evt) {
+    let type = evt.target.getAttribute('data-type');
     setFeedback(prevFeedback => ({
       ...prevFeedback,
       [type]: prevFeedback[type] + 1,
@@ -54,7 +55,11 @@ const Form = () => {
         </form>
       </div>
       <h2>Statistics</h2>
-      <Statistics good={good} neutral={neutral} bad={bad} />
+      <Statistics
+        good={feedback.good}
+        neutral={feedback.neutral}
+        bad={feedback.bad}
+      />
     </>
   );
 };
