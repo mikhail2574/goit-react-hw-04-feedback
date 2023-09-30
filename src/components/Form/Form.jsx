@@ -2,26 +2,24 @@ import React, { useState } from 'react';
 import { Statistics } from '../Statistics/Statistics';
 import css from './Form.module.css';
 
+const FeedbackType = {
+  GOOD: 'good',
+  NEUTRAL: 'neutral',
+  BAD: 'bad',
+};
+
 const Form = () => {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+  const [feedback, setFeedback] = useState({
+    [FeedbackType.GOOD]: 0,
+    [FeedbackType.NEUTRAL]: 0,
+    [FeedbackType.BAD]: 0,
+  });
 
   function clickedBtn(evt) {
-    let btnType = evt.target.getAttribute('data-type');
-    switch (btnType) {
-      case 'good':
-        setGood(good + 1);
-        break;
-      case 'neutral':
-        setNeutral(neutral + 1);
-        break;
-      case 'bad':
-        setBad(bad + 1);
-        break;
-      default:
-        console.log('not found');
-    }
+    setFeedback(prevFeedback => ({
+      ...prevFeedback,
+      [type]: prevFeedback[type] + 1,
+    }));
   }
 
   return (
